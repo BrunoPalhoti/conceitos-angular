@@ -1,0 +1,22 @@
+<app-usuario-detalhe [usuariosFilho]="usuarioSelect"
+(usuarioEmitter)="onUsuarioEmitter($event)"
+(usuarioSalvarEmitter)="onUsuarioSalvarEmitter($event)">
+</app-usuario-detalhe>
+              <!--filho recebendo valore pai-->  <!--pai recendo valor do filho-->
+<table class="table">
+  <tr>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Cpf</th>
+    <th>Ação</th>
+  </tr>
+  <tr *ngFor="let u of usuarios"> <!--forech-->
+    <td>{{u.id}}</td>
+    <td>{{u.nome}}</td>
+    <td>{{u.email}}</td>
+    <td>{{u.cpf | cpf}}</td>
+    <td><button (click)="onSelecionarClique(u)" class="btn btn-primary">Selecionar</button></td>
+  </tr>
+</table>
+

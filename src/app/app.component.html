@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Curso Angular</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/primeiro']" routerLinkActive="active">Primeiro</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/usuario']" routerLinkActive="active">Usuário</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/pokemon']" routerLinkActive="active">Pokemon</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/formularios']" routerLinkActive="active">Formulario</a>
+      </li>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </ul>
+  </div>
+</nav>
+<div class=" container">
+<router-outlet></router-outlet>
+</div>
+<!--footer-->
+
+<!--<h2> Angular 12 </h2>
+
+<p> {{ salario }} </p>
+
+<p>  {{ title }} </p>
+
+<p> {{ mostrarMensagem() }} </p>
+
+<p>  {{ 1+2 }} </p>
+
+<p> <input class="form-control" type="text" value="{{title}}"> </p>
+
+<p> <input class="form-control" type="text" #titleInput (keyup)="onKeyUp(titleInput.value)" [value]="title"> </p>
+
+<p> {{ titleInput.value }} </p>
+
+<p> <input  class="form-control" type="text" [(ngModel)]="title"> </p>
+
+<p> <button class="btn btn-primary" (click)="meuClique()" > Clique aqui </button> </p>-->
+

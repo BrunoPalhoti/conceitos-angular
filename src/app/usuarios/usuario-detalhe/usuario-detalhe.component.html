@@ -1,0 +1,8 @@
+<div class="card" *ngIf="usuariosFilho">
+  <div class="card-body"  class="d-flex p-2">
+    <p>Nome:<input type="text" #nome [value]="usuariosFilho.nome"></p>
+    <p>E-mail:<input type="text" #email [value]="usuariosFilho.email"></p>
+    <p>Cpf: <input type="text" #cpf [value]="usuariosFilho.cpf"></p>
+    <p><button (click)="clickButton( nome.value, email.value, cpf.value)" class="btn btn-primary">Salvar</button></p>
+  </div>
+</div>

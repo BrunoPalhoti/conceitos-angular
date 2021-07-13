@@ -1,0 +1,13 @@
+<div class="row"> <!--Na mesma linha-->
+ <div class="col-3">
+          <!--EventBinding-->
+  <button (click)="alteraString1()" class="btn btn-primary btn-lg tamanho-maior ">BTN 1</button>
+ </div>
+<div class="col-8">
+          <!--BrobyBinding-->    <!--Só mostra se o if for verdadeiro e se for falso destroi-->
+  <button [class]="minhaClasse" *ngIf="minhaClasse == 'btn-success'">BTN 1</button>
+</div>
+</div>
+
+
+

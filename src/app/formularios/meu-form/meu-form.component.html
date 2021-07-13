@@ -1,0 +1,68 @@
+<form [formGroup]="meuForm">
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+                                         <!--tratamentoErro(FormControl)-->
+    <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp" placeholder="E-mail">
+  </div>
+                             <!--filho (erro-field.messages.component.ts)-->
+  <erro-field-messages [field]="meuForm.controls.email" [nome]="'E-mail '"></erro-field-messages> <!--Erro recebido do filho-->
+  <!--<div class="card">
+    <p> Value: {{ meuForm.controls.email.value }} </p>
+    <p> Status: {{ meuForm.controls.email.status }} </p>
+    <p> Touched: {{ meuForm.controls.email.touched }} </p>
+    <p> Pristine: {{ meuForm.controls.email.pristine }} </p>
+    <p> Errors: {{ meuForm.controls.email.errors | json }} </p>
+  </div>-->
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+                                              <!--tratamentoErro(FormControl)-->
+    <input type="password" class="form-control" formControlName="senha" placeholder="Senha">
+  </div>
+                              <!--filho (erro-field.messages.component.ts)-->
+  <erro-field-messages [field]="meuForm.controls.senha" [nome]="'Senha '"></erro-field-messages> <!--Erro recebido do filho-->
+  <!-- <div class="card">
+    <p> Value: {{ meuForm.controls.senha.value }} </p>
+    <p> Status: {{ meuForm.controls.senha.status }} </p>
+    <p> Touched: {{ meuForm.controls.senha.touched }} </p>
+    <p> Pristine: {{ meuForm.controls.senha.pristine }} </p>
+    <p> Errors: {{ meuForm.controls.senha.errors | json }} </p>
+  </div>-->
+
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>CEP</label>  <!--quando sai do campo (blur)-->      <!--tratamentoErro(FormControl)-->
+      <input type="text" (blur)="onBuscarCep()" class="form-control" formControlName="cep" placeholder="CEP">
+    </div>
+
+    <div class="form-group col-md-4">
+      <label >Logradouro</label>
+                                            <!--tratamentoErro(FormControl)-->
+      <input type="text" class="form-control" formControlName="logradouro" placeholder="Logradouro" readonly>
+    </div>
+
+    <div class="form-group col-md-4">
+      <label >Bairro</label>
+                                            <!--tratamentoErro(FormControl)-->
+      <input type="text" class="form-control" formControlName="bairro" placeholder="Bairro" readonly>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>Cidade</label>
+                                            <!--tratamentoErro(FormControl)-->
+      <input type="text" class="form-control" formControlName="localidade" placeholder="Cidade" readonly>
+    </div>
+
+    <div class="form-group col-md-6">
+      <label >Estado</label>
+                                            <!--tratamentoErro(FormControl)-->
+      <input type="text" class="form-control" formControlName="uf" placeholder="Estado" readonly>
+    </div>
+
+  </div>
+  <erro-field-messages [field]="meuForm.controls.cep" [nome]="'CEP '"></erro-field-messages> <!--Erro recebido do filho-->
+    <button class="btn btn-primary" >Salvar</button>
+</form>

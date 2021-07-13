@@ -1,0 +1,8 @@
+<div class="card" *ngIf="pokemonFilho">
+  <div class="card-body">
+    <p>NOME: {{ pokemonFilho.name }} </p>
+    <p>PESO: {{ pokemonFilho.weight }} </p>
+    <p>ALTURA: {{pokemonFilho.height}}</p>
+    <img [src]="pokemonFilho.sprites.back_default">
+  </div>
+</div>
